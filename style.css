@@ -1,0 +1,40 @@
+.bg-window {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    margin-bottom: 25px;
+    border: 3px solid #222;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    
+    /* Apply a single sample background image to all boxes */
+    background-image: url('img.jpg');
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    background-position: center;   /* Centers the image anchor point */
+}
+
+/* auto (Default): Keeps the image at its original, native pixel dimensions */
+.size-auto {
+    background-size: auto;
+}
+
+/* cover: Scales the image proportionally so it completely blankets the entire box. 
+   Parts of the image might get cropped off, but no empty background gaps will show. */
+.size-cover {
+    background-size: cover;
+}
+
+/* contain: Scales the image proportionally so the whole picture fits inside the box. 
+   No parts are cropped, but you might get empty space on the sides or top/bottom. */
+.size-contain {
+    background-size: contain;
+    background-color: #444; /* Dark fill to see the empty gaps clearly */
+}
+
+/* 100% 100%: Forces the image width and height to match the box exactly. 
+   Warning: This will squish or warp your image if the aspect ratios don't match! */
+.size-stretch {
+    background-size: 100% 100%;
+}
